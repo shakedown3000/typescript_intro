@@ -1,1 +1,5 @@
 import './style.css'
+// import './02_string_number_dom/string.ts'
+// import './02_string_number_dom/number.ts'
+import './02_string_number_dom/string_aufgaben.ts'
+import './02_string_number_dom/number_aufgaben.ts'
