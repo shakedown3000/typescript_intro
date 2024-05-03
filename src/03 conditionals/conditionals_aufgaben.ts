@@ -198,7 +198,8 @@ switch (schoolGrade) {
 
 let salesMonth = Math.ceil(Math.random()*12)
 console.log(salesMonth);
-function salesMonthFunction (salesMonth) {
+
+function salesMonthFunction (salesMonth: number) {
     switch (salesMonth) {
         case 1:
         case 2:
