@@ -1,3 +1,5 @@
+// Bisher funktioniert nur der 1 Button
+
 
 let counterHome = 0;
 let counterAway = 0;
