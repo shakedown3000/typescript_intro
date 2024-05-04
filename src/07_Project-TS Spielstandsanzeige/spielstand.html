@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spielstandanzeiger</title>
+    <link rel="stylesheet" href="./spielstand.css">
+</head>
+<body>
+    <main>
+        <section class="play">
+            <section class="outerbox">
+            <fieldset><legend>Home</legend>
+                <div class="scorebox_wrapper"> 
+                    <div class="scorebox">
+                        <p class="score" id="home">0</p>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="smallboxes left">
+                <div ><p id="plus_one_home">+1</p></div>
+                <div><p id="plus_two_home">+2</p></div>
+                <div><p id="plus_three_home">+3</p></div>
+            </div>
+        </section>
+        <section class="outerbox">
+            <fieldset><legend>Away</legend>
+                <div class="scorebox_wrapper"> 
+                    <div class="scorebox">
+                        <p class="score" id="away">0</p> 
+                    </div>       
+                </div>
+            </fieldset>
+            <div class="smallboxes right">
+                <div><p id="plus_one_away">+1</p></div>
+                <div><p id="plus_two_away">+2</p></div>
+                <div><p id="plus_three_away">+3</p></div>
+            </div>
+            </section>
+        </section>
+        <section class="reset">
+            <button>Reset</button>
+        </section>
+    </main>
+<script type="module" src="./spielstand.ts"></script>
+</body>
+</html>

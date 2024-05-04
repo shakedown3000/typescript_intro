@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: auto 0;
+    text-align: center;
+}
+
+@font-face {
+    font-family: Orbitron;
+    src: url(./fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+:root {
+    --yellow: #FDF860;
+    --green: #97F5BB;
+    --purple: #525DF4;
+    --grey: #2C2C2C;
+}
+
+html {
+    font-family: Orbitron;
+    font-size: 30px;
+    color: white;
+}
+
+body {
+    background-color: var(--grey);
+}
+
+.play {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+.outerbox {
+    margin: auto 1rem;
+}
+
+fieldset {
+    border: 0.1rem solid var(--green);
+    border-radius: 0.5rem;   
+    width: 20vw;
+    height: 20vw;
+    min-width: 8rem;
+    min-height: 8rem;
+    
+}
+
+legend {
+    font-size: 0.6rem;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scorebox_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.scorebox {
+    background-color: black;
+    border-radius: 0.5rem;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.score {
+    font-size: 2rem;
+    color: var(--yellow);
+}
+
+.smallboxes {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.smallboxes div {
+    margin: 10% 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+    display: flex;
+}
+
+.smallboxes div:hover {
+        cursor: pointer;
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+    }
+
+.smallboxes p {
+    font-size: 20px;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding: 0.2rem;
+}
+
+.left div {
+    background-color: var(--green);
+}
+
+.right div {
+    background-color: var(--purple);
+}
+
+.reset {
+    height: 10vh;
+}
+
+button {
+    margin-top: 0;
+    height: 1rem;
+    width: 2.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+}
