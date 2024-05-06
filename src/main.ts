@@ -9,3 +9,5 @@ import './05 Date/date_aufgaben.ts'
 import './06_Functions/Funktionen_Aufgaben.ts'
 import './07_Project-TS Spielstandsanzeige/spielstand.css'
 import './08_Arrays/arrays_aufgaben.ts'
+import './08_Arrays/array_bonus.ts'
+
