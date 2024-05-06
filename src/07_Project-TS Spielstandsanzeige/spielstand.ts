@@ -1,5 +1,4 @@
-// Does not work
-
+// Declaring Variables
 let counterHome: number = 0;
 let counterAway: number = 0;
 
