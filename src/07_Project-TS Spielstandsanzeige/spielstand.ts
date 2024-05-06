@@ -1,8 +1,7 @@
-// Bisher funktioniert nur der 1 Button
+// Does not work
 
-
-let counterHome = 0;
-let counterAway = 0;
+let counterHome: number = 0;
+let counterAway: number = 0;
 
 // Ansprechen des Display-Scores im HTML (paragraph) durch vergeben einer Konstanten
 
@@ -10,59 +9,66 @@ let counterAway = 0;
 const scoreElementHome = document.getElementById ('home')
 // Score Rechts
 const scoreElementAway = document.getElementById('away')
+// Reset
+const resetButton = document.getElementById('reset_score')
 
 // Ansprechen der Zahlencounter
 // ID Plusone Home wird zu -> AdOneHome
 const addOneHome = document.getElementById('plus_one_home');
 const addTwoHome = document.getElementById('plus_two_home');
 const addThreeHome = document.getElementById('plus_three_home');
+
 const addOneAway = document.getElementById('plus_one_away');
 const addTwoAway = document.getElementById('plus_two_away');
 const addThreeAway = document.getElementById('plus_three_away');
 
-// Frage: Wie kann ich p innerhalb eines DIVS ansprechen?
 
 // Überprüfen, ob Elemente gefunden wurden mit verschachteltem If Statement
 
-if(scoreElementHome) {
-    console.log("element Score existiert");
-        if(addOneHome) {
-        addOneHome.addEventListener('click', addCounterOneHome); 
-        console.log("Added 1 to the Home Score");   
+// HOME
+function updateScoreHome(pointsHome: number) {
+    if (scoreElementHome) { 
+        if (addOneHome && addTwoHome && addThreeHome) {
+            counterHome += pointsHome;
+            scoreElementHome.textContent = counterHome.toString();
         }
-        else if (addTwoHome) {
-        addTwoHome.addEventListener('click', addCounterTwoHome);    
-        console.log("Added 2 to the Home Score");     
-        }
-        else if (addThreeHome) {
-        addThreeHome.addEventListener('click', addCounterThreeHome);    
-        console.log("Added 3 to the Home Score");     
-        }
-    else {
-        console.error('counterElement oder buttonElement nicht gefunden!');
-}
+    }
+  }
+
+
+if (addOneHome && addTwoHome && addThreeHome) {
+    addOneHome.addEventListener('click', () => updateScoreHome(1));
+    addTwoHome.addEventListener('click', () => updateScoreHome(2));
+    addThreeHome.addEventListener('click', () => updateScoreHome(3));
 }
 
-function addCounterOneHome(event: MouseEvent) {
-    event.preventDefault();
-    counterHome++;
-    if (scoreElementHome) {
-        scoreElementHome.textContent = counterHome.toString();
+// AWAY
+
+function updateScoreAway(pointsAway: number) {
+    if (scoreElementAway) { 
+        if (addOneAway && addTwoAway && addThreeAway) {
+            counterAway += pointsAway;
+            scoreElementAway.textContent = counterAway.toString();
+        }
     }
+  }
+
+  if (addOneAway && addTwoAway && addThreeAway) {
+    addOneAway.addEventListener('click', () => updateScoreAway(1));
+    addTwoAway.addEventListener('click', () => updateScoreAway(2));
+    addThreeAway.addEventListener('click', () => updateScoreAway(3));
 }
 
-function addCounterTwoHome(event: MouseEvent) {
-    event.preventDefault();
-    counterHome = counterHome + 2;
-    if (scoreElementHome) {
-        scoreElementHome.textContent = counterHome.toString();
-    }
+// Reset
+
+if (resetButton) {
+    resetButton.addEventListener('click', () => resetScoresToZero())
 }
 
-function addCounterThreeHome(event: MouseEvent) {
-    event.preventDefault();
-    counterHome = counterHome + 3;
-    if (scoreElementHome) {
-        scoreElementHome.textContent = counterHome.toString();
-    }
+function resetScoresToZero() {
+    if (scoreElementAway && scoreElementHome)
+    counterAway = 0;
+    counterHome = 0;
+    scoreElementAway.textContent = '0';
+    scoreElementHome.textContent = '0';
 }
