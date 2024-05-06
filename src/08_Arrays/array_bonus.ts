@@ -62,3 +62,7 @@ removeItemAt(2)
 console.log(toDoItems);
 
 // - Erstelle eine Funktion printList, die die gesamte To-Do-Liste auf der Konsole ausgibt.
+
+function printList(): void {
+    console.log(toDoItems);
+}
