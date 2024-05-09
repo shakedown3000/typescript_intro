@@ -2,14 +2,8 @@
 
 // - In dieser Übung geht es darum, Arrays alphabetisch zu sortieren.
 // - Sortiere die Programmiersprachen alphabetisch.
-// - Deklariere die Funktion sortAlphabetically.
-// - Verwende den Befehl sort(), um die Aufgabe zu erfüllen.
+/// - Verwende den Befehl sort(), um die Aufgabe zu erfüllen.
 // - Rufe die Funktion sortAlphabetically auf.
-// - Überprüfe den Erfolg in der Konsole.
-// - Lege selbst ein weiteres Array europeanCountries mit einigen Ländern an, z. B.
-// France, Germany, Sweden, Great Britain, Czech Republic, Switzerland
-// - Rufe die Funktion sortAlphabetically mit den europeanCountries auf
-// - Überprüfe den Erfolg in der Konsole.
 
 let languages: string[] = [
     "JavaScript",
@@ -26,17 +20,18 @@ let languages: string[] = [
     "Swift"
 ];
 
-// Use the sort() function to sort the array alphabetically
+console.log(`Before sortation: ${languages}`);
 
-function sortAlphabetically(a: string, b: string){
-    return a.localeCompare(b);
-}
+// - Deklariere die Funktion sortAlphabetically. return element.sort() sortiert lexiklisch alphabetisch :)
 
-// Call the function and store the sorted array
-let sortedLanguages = sortAlphabetically(languages);
+function sortAlphabetically(sortingElement: string[]): string[] {
+    return sortingElement.sort()
+} 
 
-// Display the sorted array
-console.log(sortAlphabetically);
+// - Überprüfe den Erfolg in der Konsole.
+console.log(`After sortation: ${sortAlphabetically(languages)}`);
+
+// - Lege selbst ein weiteres Array europeanCountries mit einigen Ländern an, z. B.
 
 let europeanCountries: string[] = [
     "France", 
@@ -47,9 +42,13 @@ let europeanCountries: string[] = [
     "Switzerland"
 ];
 
-let sortedEuropeanCountries = sortAlphabetically(europeanCountries);
+console.log(`Before sortation: ${europeanCountries}`);
 
-console.log(sortAlphabetically);
+// - Rufe die Funktion sortAlphabetically mit den europeanCountries auf
+// - Überprüfe den Erfolg in der Konsole.
+console.log(`After sortation: ${sortAlphabetically(europeanCountries)}`);
+
+
 
 // Array-TS-Sort-Level-1_2 (sort + reverse)
 
@@ -57,41 +56,108 @@ console.log(sortAlphabetically);
 // - Sortiere die Programmiersprachen in umgekehrter alphabetischer Reihenfolge.
 // - Nenne die Funktion sortDescending (= sortiere absteigend).
 // - Verwende den Befehl sort() und reverse(), um die Aufgabe auszuführen.
+
+function sortDescending(a: string, b: string) {
+    // Wie sortiere ich in umgekehrter alphabetischer Reihenfolge? Mit localeCompare :)
+    return b.localeCompare(a) // b - a bedeutet Differenz absteigend
+}
+
 // - Rufe die Funktion sortDescending auf.
 // - Überprüfe das Ergebnis in der Konsole.
+// die vorher definierte Funktion setzen wir in die Sort Funktion 
+
+languages.sort(sortDescending);
+console.log(`Descending: ${languages}`);
+
 // - Rufe die Funktion auch für europeanCountries auf
 // - Überprüfe das Ergebnis in der Konsole.
 
-// Declare function that sorts array descending:
 
-
-
-//   function sortDescendingString(a: string, b: string) {
-//     return b.localeCompare(a);
-//   }
-
-// console.log('languages descending', languages.sort(sortDescendingString));
-
-// let descendingLanguages= sortDescendingString(languages);
-
-// // Funktion, um array aufsteigend alphabetisch zu sortieren
-
-// function sortAscendingString(firstString: string, secondString: string) {
-//     return firstString.localeCompare(secondString);
-//   }
+europeanCountries.sort(sortDescending);
+console.log(`Descending: ${europeanCountries}`);
 
 
 
 // Array-TS-Sort-Level-1_3 (sort)
 
 // - In dieser Übung lernst du, wie man die Nummern 0-99 aufsteigend sortiert.
-// - Sortiere die Zahlen aus dem Array im Code-Snippet aufsteigend.
-// - Verwende den Befehl sort() und schau dir diese [Doku](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort?retiredLocale=de) genauer an, um die Aufgabe korrekt auszuführen.
-// - Überprüfe das Ergebnis in der Konsole.
-// - Sortiere anschließend die Zahlen aus dem Array absteigend
-// - Überprüfe das Ergebnis in der Konsole.
-
 let numArray1: number[] = [36, 24, 22, 3, 2, 98, 88, 99, 10, 54, 68, 70];
+console.log(`Before: ${numArray1}`); 
 
-numArray1.sort()
+function sortAscendingNumbers(a: number, b:number): number {
+    return a-b;
+}
+numArray1.sort(sortAscendingNumbers);
+
+// - Überprüfe das Ergebnis in der Konsole.
+console.log(`After with ascending numbers: ${numArray1}`);
+
+
+// - Sortiere anschließend die Zahlen aus dem Array absteigend
+
+numArray1.reverse();
+
+// - Überprüfe das Ergebnis in der Konsole.
+
 console.log(numArray1);
+
+
+
+// Array-TS-Sort-Level-2_1
+
+// - Schreibe ein kleines Programm, das Zeichenketten umkehrt.
+// - Diese Function soll jeden String, der ihr als Parameter übergeben wird umdrehen können
+// - Du wirst Array-Methoden verwenden müssen, um den String umzudrehen.
+// - Rufe die Function mit deinem Namen als Parameter auf.
+// - Überprüfe das Ergebnis in der Konsole.
+
+// - Versuche diese Begriffe umzukehren:
+let namesArray: string[] = [
+    "Sergio",
+    "Hannah",
+    "Regallager",
+    "Reliefpfeiler",
+    "Rentner"
+    ];
+
+// Funktion deklarieren, um Strings abzufragen mit map: map erstellt ein neues array indem sie auf jedes element im array eine funktion anwendet
+// Ich schreibe eine Funktion, die die Reihenfolge der Buchstaben ändert. Danach eine Funktion, die ein neues Map erstellt.
+// Split Methode verwenden (The split() method in TypeScript allows you to split a string into an array of substrings by separating the string using a specified separator) -> Ergebnis ist ein array
+// reverse zum Umdrehen aller elemente im array
+// join um array wieder zusammenzufügen
+
+function reverseNames(name: string): string {
+    return name.split('').reverse().join(''); 
+}
+
+
+// Jetzt brauche ich eine Funktion, die es mir ermöglicht alle Namen aus dem Array abzurufen, nicht nur einen
+
+function reverseAllNames(nameListNew: string[]): string[] {
+    return nameListNew.map(reverseNames);
+}
+
+console.log(reverseAllNames(namesArray));
+
+// - Versuche diese Sätze umzukehren:
+//     - Ella mag alle Bohnen
+//     - han nesaH has ennaH
+
+// Split Methode um zunächst alle Wörter in einzelne Arrays zu zerlegen. Ich splitte beim Leerzeichen. Dann wende ich die Methode split erneut an um die einzelnen Buchstaben in Arrays zu zerlegen
+
+function splitSentence(sentence: string): string {
+    let firstArray: string[] = sentence.split(' '); // haben jetzt die Wörter getrennt in ein array
+    console.log(firstArray); // ["Ella", "mag","alle","Bohnen"]
+        function arrayReverse(name: string): string {
+            return name.split('').reverse().join(''); // Reversen EINES Wortes
+        }
+        function reverseArray(testWord: string[]): string[] {
+            return testWord.map(arrayReverse); // Abrufen aller Namen
+        }
+        console.log(reverseArray(firstArray))
+        return reverseArray(firstArray).reverse().join(' '); // Am Ende noch mal Reverse
+    
+}
+
+console.log(splitSentence('Ella mag alle Bohnen'));
+console.log(splitSentence('han nesaH has ennaH'));
