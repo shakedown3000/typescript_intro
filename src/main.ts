@@ -12,4 +12,5 @@ import './08_Arrays/arrays_aufgaben.ts'
 import './08_Arrays/array_bonus.ts'
 import './08_Arrays/array_sort_aufgaben.ts'
 import './08_Arrays/arrays_III.ts'
+import './09_Loops/loops_aufgaben.ts'
 

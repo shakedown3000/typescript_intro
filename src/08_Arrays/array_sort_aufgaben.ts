@@ -161,3 +161,37 @@ function splitSentence(sentence: string): string {
 
 console.log(splitSentence('Ella mag alle Bohnen'));
 console.log(splitSentence('han nesaH has ennaH'));
+
+
+
+// Array-TS-Sort-Level-2_3 (slice)
+
+// Lernziel: Arrays zusammenführen
+
+// - Lege ein Array oldPainters von Strings mit folgenden Elementen an:
+
+let myArray1: string[] = ["Caspar David Friedrich", "Mary Cassatt", "Rosa Bonheur", "Francisco de Goya", "Édouard Manet"];
+
+// Lege ein zweites Array newerPainters von String mit diesen Elementen an:
+
+let yourArray: string[] = ["Pablo Picasso", "Salvador Dalí", "Frida Kahlo", "Georgia O'Keeffe"]
+
+// - Erstelle die Arrays auf zwei Arten: einmal mit concat und einmal mit dem Spread-Operator
+//     - femalePainters mit den weiblichen Malerinnen aus beiden Arrays
+//     - malePainters mit den männlichen Malern aus beiden Arrays
+// - Lass dir die Ergebnisse ausgeben
+
+
+
+// Array-TS-Level-1_14 (copy)
+
+// - Lernziel: Arrays kopieren
+// - Erstelle ein Array oldHollywoodActors vom Typ String mit folgendem Inhalt: “Marlon Brando”, “Audrey Hepburn”, “Elizabeth Taylor”, “Cary Grant”, “Paul Newman” und “Doris Day”
+// - Erstelle eine neue Variable actorsReference und weise ihr direkt das Array zu
+// - Füge “Marilyn Monroe” hinzu
+// - Lass dir die Inhalte von oldHollywoodActors und actorsReference ausgeben
+// - Erstelle mit concat() eine Kopie von oldHollywoodActors
+// - Erstelle eine weitere Kopie mit slice()
+// - Erstelle eine dritte Kopie mit dem Spread-Operator
+// - Ändere jeweils einen anderen Wert in den drei Kopien
+// - Lass dir den Inhalt des ursprünglichen Arrays und aller Kopien ausgeben
