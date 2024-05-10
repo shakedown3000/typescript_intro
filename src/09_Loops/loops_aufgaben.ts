@@ -161,8 +161,13 @@ function addOToLoop(event: Event) {
     event.preventDefault();
     // Checken, ob es Elemente gibt im Doc
     if (inputElementUser || addButtonElement || outputElement) {
-        const inputValue = inputElementUser.value;
-
-
+        const inputValue: number = inputElementUser.value; // wie bekomme ich value? 
+        for (i = 0; i < inputValue; i++) {
+            
+            // für jeden Loop muss 1 o generiert werden 
+            // am Ende hinzufügen
+            let oString: string = 
+            outputElement.innerText = OString;
+        }
     }
 }
