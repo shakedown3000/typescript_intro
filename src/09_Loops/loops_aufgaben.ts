@@ -151,23 +151,35 @@ console.log(createImageNames())
 let numberOfOs: number;
 
 // elemente aus dem html holen und in variablen speichern
-const inputElementUser = document.getElementById('number_input') as HTMLInputElement;
+const inputElementUser = document.getElementById('number_input') as HTMLInputElement; // Type Casting
 const addButtonElement = document.getElementById('o-generator');
 const outputElement = document.getElementById('ad_o');
 
 // Funktion erstellen, um os hinzuzufügen durch user
 
-function addOToLoop(event: Event) {
+function addOToLoop(event: Event): void { // void, da diese Funktion das Ergebnis direkt in das HTML-Element einfügt, anstatt es zurückzugebe
     event.preventDefault();
     // Checken, ob es Elemente gibt im Doc
-    if (inputElementUser || addButtonElement || outputElement) {
-        const inputValue: number = inputElementUser.value; // wie bekomme ich value? 
-        for (i = 0; i < inputValue; i++) {
-            
-            // für jeden Loop muss 1 o generiert werden 
-            // am Ende hinzufügen
-            let oString: string = 
-            outputElement.innerText = OString;
+    if (inputElementUser) {
+        const inputValue = parseInt(inputElementUser.value); // Wir sprechen das Eingabefeld an und teilen der Eingabe eine Variable zu
+        // parseInt um sicherzustellen, dass wir eine Zahl erhalten
+        if (!inputValue) return ''; // Wenn nicht existiert, breche ab.
+        // Wir definieren leeren o String
+        let oString = '';
+        // Loop, um inputValue * o's zum Ergebnisstring hinzuzufügen
+        for (let i = 0; i < inputValue; i++) {
+            oString += 'o';
         }
+        // Setze das Ergebnis in das Output-Element
+        if (outputElement) {
+        outputElement.innerText = oString;
     }
 }
+}
+
+// ButtonElement Event Listener adden
+if (addButtonElement) {
+    addButtonElement.addEventListener("click", addOToLoop)
+}
+
+
