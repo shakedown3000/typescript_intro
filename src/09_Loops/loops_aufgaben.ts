@@ -104,17 +104,22 @@ doWhileLoop();
 // - Es sollen alle geraden Zahlen bis 20 im HTML-Dokument ausgegeben werden.
 
 // Überschrift 
-// if (document.getElementById('output2')) {
-//     document.getElementById('output2').innerHTML += '<br>'+"Using do ... while loops" + '<br>';
-// }
+if (document.getElementById('output2')) {
+    document.getElementById('output2').innerHTML += '<br><strong>Using do ... while loops</strong><br>';
+}
 
-// let counterForWhile = 0;
-// if (document.getElementById('output2')) {
-//     do {
-//         document.getElementById('output2').innerHTML += counterForWhile + '<br>';
-//         counterForWhile += 2;
-//     } while (counterForWhile <= 20);
-// }
+// Initialisieren des Counters 
+let counterForWhile = 0;
+
+// Zuweisen Output HTML einer Variablen
+let outputEven = document.getElementById('output2');
+
+if (outputEven) {
+    do {
+        outputEven.innerHTML += counterForWhile + '<br>';
+        counterForWhile += 2;
+    } while (counterForWhile <= 20);
+}
 
 
 // Loops-TS-Level-2_1
@@ -161,7 +166,7 @@ function addOToLoop(event: Event): void { // void, da diese Funktion das Ergebni
     if (inputElementUser) {
         const inputValue = parseInt(inputElementUser.value); // Wir sprechen das Eingabefeld an und teilen der Eingabe eine Variable zu
         // parseInt um sicherzustellen, dass wir eine Zahl erhalten
-        if (!inputValue) return ''; // Wenn nicht existiert, breche ab.
+        if (!inputValue) return; // Wenn nicht existiert, breche ab.
         // Wir definieren leeren o String
         let oString = '';
         // Loop, um inputValue * o's zum Ergebnisstring hinzuzufügen
