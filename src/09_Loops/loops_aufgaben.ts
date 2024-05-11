@@ -142,13 +142,11 @@ console.log(createImageNames())
 
 
 
-// Loops-TS-Level-2_2 NOT FINISHED
+// Loops-TS-Level-2_2 
 
 // - Lernziel: Textausgabe je nach Eingabe der User:innen erstellen unter Verwendung von Bedingungen und Schleifen.
 // - In deinem HTML ist ein Inputfeld zu sehen, in das User:innen eine Zahl eingeben können. So wird die Anzahl des Buchstabens "o" festgelegt.
 // - Schreibe eine Funktion, mit der du am Ende in deinem HTML das Wort "Loop" ausgibst, mit der eingegebenen Anzahl an Os aus dem Input-Feld.
-
-let numberOfOs: number;
 
 // elemente aus dem html holen und in variablen speichern
 const inputElementUser = document.getElementById('number_input') as HTMLInputElement; // Type Casting
