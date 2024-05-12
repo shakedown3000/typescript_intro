@@ -280,6 +280,8 @@ console.log({oldHollywoodActors}); // behält Ursprung
 
 // Array-TS-Level-3_1
 
+// Code findet nichts bisher ;(
+
 // Lernziel: In Arrays suchen und Inhalte aufbereiten
 
 // - Gegeben sind zwei Arrays vom Typ String
