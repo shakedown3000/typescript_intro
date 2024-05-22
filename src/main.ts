@@ -17,5 +17,6 @@ import './style.css'
 // import './10_Math_&_Objects/math.ts'
 // import './10_Math_&_Objects/objects.ts'
 // import './10_Math_&_Objects/objects_II'
-import './11_Project-TS Trinkgeldrechner/trinkgeld'
+// import './11_Project-TS Trinkgeldrechner/trinkgeld'
+import './12_DOM/dom_aufgaben'
 
