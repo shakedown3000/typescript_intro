@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM II</title>
+    <style>
+    
+form {
+        padding: 5px;
+        display: inline-block;
+        background: #999;
+        border-radius: 5px;
+}
+
+input {
+        background: #333;
+        color: white;
+}
+
+.background {
+    background-color: #FFF;
+}
+
+.color1 {
+    color: #BA55D3; /* Medium Orchid */
+}
+
+.color2 {
+    color: #F5FFFA; /* Mint Cream */
+}
+
+.color3 {
+    color: #1E90FF; /* Dodger Blue */
+}
+
+.color4 {
+    color: #DAA520; /* Goldenrod */
+}
+
+.color5 {
+    color: #F5DEB3; /* Wheat */
+}
+
+.color6 {
+    color: #48D1CC; /* Medium Turquoise */
+}
+
+.color7 {
+    color: #FFE4B5; /* Moccasin */
+}
+
+.color8 {
+    color: #B22222; /* Fire Brick */
+}
+
+.color9 {
+    color: #32CD32; /* Lime Green */
+}
+
+.color10 {
+    color: #708090; /* Slate Gray */
+}
+
+.button2 {
+    background-color: #035aa6;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.wrapper {
+    max-width: 400px;
+}
+
+.small {
+    margin: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.transform {
+    transform: rotate(360deg);
+}
+
+.transform2 {
+    transition: width 0.5s ease;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <form>
+      <select id="farbeAuswahlen">
+        <option>Medium Orchid</option>
+        <option>Mint Cream</option>
+        <option>Dodger Blue</option>
+        <option>Goldenrod</option>
+        <option>Wheat</option>
+        <option>Medium Turquoise</option>
+        <option>Moccasin</option>
+        <option>Fire Brick</option>
+        <option>Lime Green</option>
+        <option>Slate Gray</option>
+      </select>
+      <button id="button">Farbe von Liste Entfernen</button>
+    </form>
+
+    <div>
+      <form id="form1">
+        <label for="vorname">Vorname</label
+        ><input
+          type="text"
+          id="vorname"
+          name="vorname"
+          placeholder="Dein Name..."
+        /><label for="nachname">Last Name</label
+        ><input
+          type="text"
+          id="nachname"
+          name="nachname"
+          placeholder="Dein Nachname..."
+        /><label for="land">Land</label
+        ><select id="land" name="land">
+          <option value="Australia">Australia</option>
+          <option value="Canada">Canada</option>
+          <option value="Usa">USA</option></select
+        >
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <div>
+        <form>
+            <select id="farbeAuswahlen1">
+              <option id="1">Medium Orchid</option>
+              <option id="2">Mint Cream</option>
+              <option id="3">Dodger Blue</option>
+              <option id="4">Goldenrod</option>
+              <option id="5">Wheat</option>
+              <option id="6">Medium Turquoise</option>
+              <option id="7">Moccasin</option>
+              <option id="8">Fire Brick</option>
+              <option id="9">Lime Green</option>
+              <option id="10">Slate Gray</option>
+            </select>
+            <button id="button1">Farbe von Liste Background farben</button>
+          </form>
+    </div>
+    <div style="margin-top: 100px;">
+    <button onclick="">ROTATE BABY</button>
+    <button onclick="">Middle</button>
+    <button onclick="">Big & Crazy</button>
+    </div>
+    <div class="wrapper">
+
+        <!-- Dieses Element muss sich ändern -->
+
+    <div id="element" class="small">
+    <h1>Hallo classList!</h1>
+    </div>
+</div>
+
+    <script src="./dom_II.ts"></script>
+  </body>
+</html>
