@@ -20,5 +20,6 @@ import './style.css'
 // import './11_Project-TS Trinkgeldrechner/trinkgeld'
 // import './12_DOM/dom_aufgaben'
 // import './12_DOM/dom_aufgaben'
-import './13_Functions_II/functions_II'
+// import './13_Functions_II/functions_II'
+import './14_Module_Namensraeume/app'
 

@@ -203,12 +203,13 @@ function greetNewUser2(firstName: string, lastName: string, email: string, phone
 //     - das Ergebnis von greetNewUserVar2 wird im HTML unterhalb des Submit-Buttons ausgegeben
 
 
-customerForm?.addEventListener('submit', function(event) {
+customerForm?.addEventListener('submit', (event: Event) => {
     event?.preventDefault();
     const firstNameValue  = firstNameInput?.value;
     const lastNameValue = lastNameInput?.value;
-    const emailValue = emailInput?.value;
-    const phoneValue = phoneInput?.value;
+    const emailValue = emailInput?.value || undefined;
+    // kann man auch schreiben mit ??
+    const phoneValue = phoneInput?.value || undefined;
     
     const newCustomer: NewCustomer = { 
         firstName: firstNameValue,
