@@ -1,10 +1,58 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 body {
-background-color: pink;
-color: white;
-padding: 1%;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p1936a-m-2000x1500.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
 
-a {
-  color: white;
-  text-decoration: none;
+h1 {
+    color: #a29bfe;
+    margin-bottom: 20px;
+}
+
+ol {
+    list-style: decimal inside;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ol li {
+    margin: 10px;
+    flex: 0 0 45%;
+}
+
+ol li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+ol li a:hover {
+    background: linear-gradient(45deg, #341f97, #6c5ce7);
+    transform: translateY(-3px);
+}
+
+ol li a:active {
+    background: linear-gradient(45deg, #5e35b1, #341f97);
+    transform: translateY(0);
 }

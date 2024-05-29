@@ -22,5 +22,6 @@ import './style.css'
 // import './12_DOM/dom_aufgaben'
 // import './13_Functions_II/functions_II'
 // import './14_Module_Namensraeume/app'
-import './15_Clean_Code/clean_code'
+// import './15_Clean_Code/clean_code'
+import './16_OOP/app.ts'
 
