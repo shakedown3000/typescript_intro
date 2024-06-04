@@ -1,4 +1,4 @@
-import './style.css'
+import "./style.css";
 // import './02_string_number_dom/string.ts'
 // import './02_string_number_dom/number.ts'
 // import './02_string_number_dom/string_aufgaben.ts'
@@ -24,5 +24,6 @@ import './style.css'
 // import './14_Module_Namensraeume/app'
 // import './15_Clean_Code/clean_code'
 // import './16_OOP/app.ts'
-import './17_OOP_II/app'
-
+// import './17_OOP_II/app'
+// import "./18_OOP_III/app";
+import "./19_Interfaces/app";

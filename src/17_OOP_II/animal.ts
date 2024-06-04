@@ -38,8 +38,8 @@ class Animals {
   }
   set color(value: string) {
     console.log("Setter is calles on color");
-    if (value === "human") {
-      console.log("This is not an animal.");
+    if (value === "no idea") {
+      console.log("This is not a color.");
     } else {
       this._color = value;
     }
