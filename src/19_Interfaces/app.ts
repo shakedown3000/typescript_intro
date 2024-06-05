@@ -78,3 +78,16 @@ const manager = new Manager("Eve", 40, "Team Lead");
 manager.addSubordinate(subordinate1);
 manager.addSubordinate(subordinate2);
 manager.addSubordinate(subordinate3);
+
+// OOP-Interface-TS-Level-2_2
+
+// - Lege eine neue Datei trainee.ts an
+// - Erstelle dort eine Klasse Trainee, die das Interface IEmployee implementiert
+// - Die Position soll immer automatisch mit “Trainee” befüllt werden
+// - Lege in der app.ts zwei Instanzen der Klasse Trainee an
+// - Füge sie über addSubordinate zum Manager hinzu
+// - Erweitere das Interface IEmployee um die Eigenschaft startDate (Date) und die Methode getYearsOfService (number), die die Dienstjahre der Mitarbeitenden zum Stand heute zurückgibt
+// - Implementiere die Eigenschaft und Methode an allen nötigen Stellen
+// - Wir wollen doppelten Code für die Logik der Dienstjahresberechnung vermeiden und lagern deshalb die Methode in eine Basisklasse Employee aus
+// - Lege dazu eine neue Datei employee.ts und eine Klasse Employee, die das Interface IEmployee implementiert
+// - Die Klassen Manager, Trainee und Subordinate sollen jetzt direkt von der Klasse Employee ableiten

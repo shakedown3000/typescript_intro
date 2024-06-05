@@ -26,4 +26,5 @@ import "./style.css";
 // import './16_OOP/app.ts'
 // import './17_OOP_II/app'
 // import "./18_OOP_III/app";
-import "./19_Interfaces/app";
+// import "./19_Interfaces/app";
+import "./20_Instance/app";
