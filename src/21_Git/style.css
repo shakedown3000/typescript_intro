@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  margin: 0;
+}
+
+.credit-card {
+  width: 340px; /* Breite der Kreditkarte */
+  height: 212px; /* Höhe der Kreditkarte */
+  border-radius: 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-family: "Arial", sans-serif;
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bank-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.chip {
+  width: 40px;
+  height: auto;
+}
+
+.card-number {
+  margin: 30px 0;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-holder,
+.expiry-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+.value {
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.visa-logo {
+  width: 60px;
+  height: auto;
+}
