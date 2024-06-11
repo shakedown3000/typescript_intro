@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM</title>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(to right, #c33764, #1d2671);
+        height: 100%;
+        overflow: hidden;
+      }
+      .container {
+        width: 300px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+      }
+      .prozent {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: #f0f0f0;
+        color: #333;
+        font-size: 16px;
+        text-align: center;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #ff7f50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #ff4500;
+      }
+
+      .message {
+        margin-top: 10%;
+        font-family: Geneva;
+        width: 400px;
+        height: 400px;
+        border: 15px solid #000;
+        border-radius: 50%;
+        box-shadow: 5px 5px 15px #000 inset;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+
+p {
+        color: #fff;
+        font-size: 22px;
+        width: 85%;
+        margin: 110px auto 40px;
+    }
+
+#count {
+        color: #fff;
+        font-size: 70px;
+    }
+
+    .hidden {
+  display: none;
+}
+    </style>
+  </head>
+  <body>
+    <section>
+    <div class="container">
+      <div class="prozent"></div>
+      <button id="startCountdown">Absenden</button>
+    </div>
+  </section>
+  <section>
+    <div class="message">
+        <p>Diese Meldung wird automatisch verschwinden in </p>
+        <div id="count">10</div>
+      </section>
+
+    <script type="module" src="../23_BOM/app.ts"></script>
+  </body>
+</html>

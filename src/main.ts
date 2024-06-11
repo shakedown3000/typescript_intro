@@ -28,4 +28,5 @@ import "./style.css";
 // import "./18_OOP_III/app";
 // import "./19_Interfaces/app";
 // import "./20_Instance/app";
-import "./21_Git/git.ts";
+// import "./21_Git/git.ts";
+import "./23_BOM/app.ts";
