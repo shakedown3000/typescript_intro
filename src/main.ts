@@ -29,4 +29,5 @@ import "./style.css";
 // import "./19_Interfaces/app";
 // import "./20_Instance/app";
 // import "./21_Git/git.ts";
-import "./23_BOM/app.ts";
+// import "./23_BOM/app.ts";
+import "./24_Asynchrone Programmierung I/app";
