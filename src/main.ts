@@ -30,4 +30,7 @@ import "./style.css";
 // import "./20_Instance/app";
 // import "./21_Git/git.ts";
 // import "./23_BOM/app.ts";
-import "./24_Asynchrone Programmierung I/app";
+// import "./24_Asynchrone Programmierung I/app";
+// import "./26_API/fetch-posts";
+// import "./27_API II/app";
+import "./28_SOLID/app";
